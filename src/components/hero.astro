@@ -1,5 +1,5 @@
 ---
-import VideoComponent from "@components/video/VideoComponent";
+import { YouTube } from "astro-lazy-youtube-embed";
 ---
 
 <main
@@ -7,24 +7,17 @@ import VideoComponent from "@components/video/VideoComponent";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Rio Boque Magico Chazuta
+      Rio Bosque Magico Chazuta
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
       Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly
+      pages.
+      <wbr />
+      Built with Astro.build and TailwindCSS. You can quickly
       create any website with this starter.
     </p>
   </div>
-  <div class="py-6 md:order-1  md:block">
-    <VideoComponent
-                client:load
-                src="https://img.freepik.com/foto-gratis/resumen-bombilla-creativa-sobre-fondo-azul-brillante-ia-generativa_188544-8090.jpg?w=1060&t=st=1708449248~exp=1708449848~hmac=2f4eb21698de6951569a64a7abdd6a105bbc6b84ba083be91f0de6f367b49896"
-                height={370}
-                width={700}
-                title="Accountability that works for you"
-                video_id="Dam_JVQlk3M"
-                video_width="w-[700px]"
-                video_height="h-[370px]"
-              />
+  <div class="py-6 md:order-1  md:block w-[90%]">
+    <YouTube class="rounded-2xl" id="videoIntro" videoId="Dam_JVQlk3M" title="Welcome to RioBosqueMagico" />
   </div>
 </main>
